@@ -40,11 +40,11 @@ const About = () => {
             <span className="font-semibold text-blue-800">
               Jestro Maverick de Castro
             </span>
-            , a tech-savvy creative from Manila with a passion for building
-            sleek, user-centered designs and turning data into meaningful
-            insights. Whether it's coding interfaces, designing Figma
-            prototypes, or visualizing analytics in Power BI as admire turning
-            ideas into real, interactive products.
+            , a enthusiastic person with a passion for building sleek,
+            user-centered designs and turning data into meaningful insights.
+            Whether it's coding interfaces, designing Figma prototypes, or
+            visualizing analytics in Power BI as admire turning ideas into real,
+            interactive products.
           </p>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center md:text-left">
             I am currently pursuing my Bachelor of Science in Information
