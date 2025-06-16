@@ -6,6 +6,7 @@ const projects = [
   {
     title: "NTC Scanner Checker Mobile App",
     description: "A mobile-based exam checker with QR scanning for examinees.",
+    role: "Application Developer & UI/UX Designer",
     imgUrl: require("../assets/ntc.jpg"),
     link: "https://www.figma.com/proto/sNTb3prCWRXtbG19gaDN5s?node-id=0-1&t=9SQBx5X4xOS7fsHf-6",
   },
@@ -13,18 +14,21 @@ const projects = [
     title: "Stranded Mobile App",
     description:
       "Guidance app to help senior high students choose the right strand.",
+    role: "UI/UX Designer",
     imgUrl: require("../assets/stranded.jpg"),
     link: "https://www.figma.com/proto/ANSv58WBpKJW22ihB0IU9e?node-id=0-1&t=9SQBx5X4xOS7fsHf-6",
   },
   {
     title: "YAR Drainage Resource Management System",
     description: "Resource tracking with QR code integration for YAR Drainage.",
+    role: "Front-End Developer & UI/UX Designer",
     imgUrl: require("../assets/yar.jpg"),
     link: "https://www.figma.com/proto/7BKBuEtgM9CXy5GTGo4otk?node-id=0-1&t=9SQBx5X4xOS7fsHf-6",
   },
   {
     title: "Matahum Inventory Management System",
     description: "Inventory control system for Matahum Rice Trading.",
+    role: "Front-End Developer & UI/UX Designer",
     imgUrl: require("../assets/matahum.jpg"),
     link: "https://www.figma.com/proto/CSmgeR1ZxbWeukKWyHNlkR?node-id=0-1&t=9SQBx5X4xOS7fsHf-6",
   },
@@ -73,9 +77,12 @@ const Projects = () => {
                 </div>
               </div>
               <div className="p-5">
-                <h3 className="text-xl font-bold text-blue-800 mb-2">
+                <h3 className="text-xl font-bold text-blue-800 mb-1">
                   {project.title}
                 </h3>
+                <p className="text-sm text-gray-500 italic mb-2">
+                  Role: {project.role}
+                </p>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   {project.description}
                 </p>
