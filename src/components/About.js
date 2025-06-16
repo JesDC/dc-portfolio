@@ -55,10 +55,10 @@ const About = () => {
             While interning at the National Telecommunications Commission (NTC),
             I was working as an Application Developer and a part of the core
             development team of the NTC Scanner Checker Mobile App, where we
-            laid the foundation of the system for future development. I also
-            helped in digitizing the records of employees using Microsoft Access
-            and Power BI, thereby supporting the agency's thrust towards data
-            modernization.
+            laid the foundation of the mobile application for future
+            development. I also helped in digitizing the records of employees
+            using Microsoft Access and Power BI, thereby supporting the agency's
+            thrust towards data modernization.
           </p>
 
           {/* RESUME DOWNLOAD */}
