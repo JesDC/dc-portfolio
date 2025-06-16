@@ -5,10 +5,12 @@ import "aos/dist/aos.css";
 const projects = [
   {
     title: "NTC Scanner Checker Mobile App",
-    description: "A mobile-based exam checker with QR scanning for examinees.",
+    description: "A mobile-based exam checker with for examinees.",
     role: "Application Developer & UI/UX Designer",
     imgUrl: require("../assets/ntc.jpg"),
-    link: "https://www.figma.com/proto/sNTb3prCWRXtbG19gaDN5s?node-id=0-1&t=9SQBx5X4xOS7fsHf-6",
+    link: "https://www.figma.com/proto/sNTb3prCWRXtbG19gaDN5s?node-id=0-1&t=9IX0hzOO9DqJOZsg-6",
+    designLink:
+      "https://www.figma.com/design/CArjBPAhPNAFsUDnfq7WxV/Mobile-App?node-id=0-1&t=2GlqIobxuDvMOH00-1",
   },
   {
     title: "Stranded Mobile App",
@@ -17,6 +19,8 @@ const projects = [
     role: "UI/UX Designer",
     imgUrl: require("../assets/stranded.jpg"),
     link: "https://www.figma.com/proto/ANSv58WBpKJW22ihB0IU9e?node-id=0-1&t=9SQBx5X4xOS7fsHf-6",
+    designLink:
+      "https://www.figma.com/design/ANSv58WBpKJW22ihB0IU9e/Stranded-UI-Design?node-id=0-1&t=yQzp5OJAtzRr5m2q-1",
   },
   {
     title: "YAR Drainage Resource Management System",
@@ -24,6 +28,8 @@ const projects = [
     role: "Front-End Developer & UI/UX Designer",
     imgUrl: require("../assets/yar.jpg"),
     link: "https://www.figma.com/proto/7BKBuEtgM9CXy5GTGo4otk?node-id=0-1&t=9SQBx5X4xOS7fsHf-6",
+    designLink:
+      "https://www.figma.com/design/7BKBuEtgM9CXy5GTGo4otk/Yar-Drainage?node-id=0-1&t=3VCSUvS7RTz2M0Pd-1",
   },
   {
     title: "Matahum Inventory Management System",
@@ -31,6 +37,8 @@ const projects = [
     role: "Front-End Developer & UI/UX Designer",
     imgUrl: require("../assets/matahum.jpg"),
     link: "https://www.figma.com/proto/CSmgeR1ZxbWeukKWyHNlkR?node-id=0-1&t=9SQBx5X4xOS7fsHf-6",
+    designLink:
+      "https://www.figma.com/design/CSmgeR1ZxbWeukKWyHNlkR/Matahum-Inventory-Management-System?node-id=0-1&t=LRgmSbt5D3XwhhJi-1",
   },
 ];
 
@@ -65,14 +73,24 @@ const Projects = () => {
                   alt={project.title}
                   className="w-full h-52 sm:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                <div className="absolute inset-0 bg-blue-900 bg-opacity-40 flex flex-col items-center justify-center gap-2 opacity-0 group-hover:opacity-100 transition duration-300">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white bg-blue-800 hover:bg-blue-700 px-5 py-2 rounded-full text-sm sm:text-base font-semibold shadow-lg transition"
+                    className="text-white bg-blue-800 hover:bg-blue-700 px-4 py-1 rounded-full text-xs sm:text-sm font-medium shadow-lg transition"
+                    title="Figma interactive prototype"
                   >
-                    View Design
+                    View Prototype
+                  </a>
+                  <a
+                    href={project.designLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white bg-blue-700 hover:bg-blue-600 px-4 py-1 rounded-full text-xs sm:text-sm font-medium shadow-md transition"
+                    title="Full editable UI design in Figma"
+                  >
+                    Open Figma Design
                   </a>
                 </div>
               </div>
@@ -80,7 +98,7 @@ const Projects = () => {
                 <h3 className="text-xl font-bold text-blue-800 mb-2">
                   {project.title}
                 </h3>
-                <span className="inline-block mb-2 text-xs font-medium bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                <span className="inline-block mb-3 text-xs font-medium bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
                   {project.role}
                 </span>
                 <p className="text-gray-700 text-sm leading-relaxed">
