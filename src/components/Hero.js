@@ -39,7 +39,7 @@ function Hero() {
 
         {/* Tagline */}
         <div className="text-lg sm:text-xl font-bold text-blue-700 mb-2">
-          Crafting experiences. Design and code with purpose.
+          Crafting experiences. Design & Code with purpose.
           {/* 
           <Typewriter
             words={["Crafting experiences. Design and code with purpose."]}
@@ -60,7 +60,7 @@ function Hero() {
         >
           I’m a passionate aspiring UI/UX designer and data analytics enthusiast
           based in Manila. Equipped with tools like React.js, Tailwind CSS,
-          Figma, Power BI, Microsoft Access, and more—I create interactive,
+          Figma, Power BI, Microsoft Access, and more.I create interactive,
           data-driven digital experiences that bring ideas to life.
         </p>
 
