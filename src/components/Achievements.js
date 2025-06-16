@@ -106,12 +106,15 @@ const Achievements = () => {
         </h2>
 
         {/* Filter Tabs */}
-        <div className="flex justify-center gap-4 mb-10" data-aos="fade-up">
+        <div
+          className="flex flex-wrap justify-center gap-3 sm:gap-4 mb-10"
+          data-aos="fade-up"
+        >
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`flex items-center gap-2 px-5 py-2 rounded-full font-medium transition 
+              className={`flex items-center justify-center gap-2 px-5 py-2 rounded-full font-medium transition w-full sm:w-auto
               ${
                 activeTab === tab.id
                   ? "bg-blue-800 text-white shadow-lg scale-105"
@@ -171,7 +174,7 @@ const Achievements = () => {
         {/* Dean’s List */}
         {activeTab === "deanslist" && (
           <ul
-            className="list-disc list-inside pl-2 text-gray-700 space-y-2"
+            className="list-disc list-inside pl-2 text-gray-700 space-y-2 max-w-xl mx-auto"
             data-aos="fade-left"
           >
             {deansList.map((entry, index) => (
@@ -186,7 +189,7 @@ const Achievements = () => {
         {/* Seminars */}
         {activeTab === "seminars" && (
           <ul
-            className="list-disc list-inside pl-2 text-gray-700 space-y-2"
+            className="list-disc list-inside pl-2 text-gray-700 space-y-3 max-w-2xl mx-auto"
             data-aos="fade-right"
           >
             {seminars.map((seminar, index) => (
