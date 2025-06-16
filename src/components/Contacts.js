@@ -35,7 +35,7 @@ const Contact = () => {
           data-aos-delay="100"
         >
           Let’s connect! Whether it’s for a job opportunity, collaboration, or
-          just a friendly hello — I’d love to hear from you.
+          just a friendly hello. I would love to hear from you.
         </p>
 
         {/* Contact Info Cards */}
