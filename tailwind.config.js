@@ -13,6 +13,9 @@ module.exports = {
         "fade-in-down": "fadeInDown 0.8s ease-in-out",
         gradient: "gradientBG 10s ease infinite",
         pulseSlow: "pulse 4s infinite",
+        glow: "glow 3s ease-in-out infinite",
+        "bounce-slow": "bounceSlow 4s ease-in-out infinite",
+        float: "float 6s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -27,6 +30,30 @@ module.exports = {
           "0%, 100%": { backgroundPosition: "0% 50%" },
           "50%": { backgroundPosition: "100% 50%" },
         },
+        glow: {
+          "0%, 100%": {
+            boxShadow: "0 0 0px rgba(96, 165, 250, 0.5)",
+          },
+          "50%": {
+            boxShadow: "0 0 25px rgba(96, 165, 250, 0.7)",
+          },
+        },
+        bounceSlow: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-8px)",
+          },
+        },
+        float: {
+          "0%, 100%": {
+            transform: "translateY(0)",
+          },
+          "50%": {
+            transform: "translateY(-10px)",
+          },
+        },
       },
       backgroundSize: {
         "gradient-animation": "400% 400%",
@@ -39,7 +66,7 @@ module.exports = {
     require("tailwind-scrollbar"), // optional: for custom scrollbars
   ],
   corePlugins: {
-    scrollBehavior: true, // enables smooth scrolling utility (if needed)
+    scrollBehavior: true,
   },
-  darkMode: "class", // optional: enable dark mode support via class strategy
+  darkMode: "class",
 };
