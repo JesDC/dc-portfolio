@@ -3,6 +3,9 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import About from "./components/About";
+import Contacts from "./components/Contacts";
+import Footer from "./components/Footer";
+import Achievements from "./components/Achievements";
 
 function App() {
   return (
@@ -18,7 +21,13 @@ function App() {
       {/* Projects Section */}
       <Projects />
 
-      <About/>
+      <About />
+
+      <Achievements />
+
+      <Contacts />
+
+      <Footer />
     </div>
   );
 }

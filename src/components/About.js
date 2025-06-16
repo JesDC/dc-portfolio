@@ -1,0 +1,145 @@
+import React from "react";
+import myPic from "../assets/mypic.jpg";
+import {
+  FaCode,
+  FaDatabase,
+  FaPalette,
+  FaChartBar,
+  FaShieldAlt,
+  FaTools,
+} from "react-icons/fa";
+import { FiDownload } from "react-icons/fi";
+
+const About = () => {
+  return (
+    <section
+      id="about"
+      className="py-24 bg-gradient-to-br from-white via-blue-50 to-white text-gray-800"
+    >
+      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+        {/* LEFT - IMAGE */}
+        <div
+          className="flex justify-center md:justify-end"
+          data-aos="fade-right"
+        >
+          <img
+            src={myPic}
+            alt="Profile"
+            className="w-72 h-72 object-cover rounded-full shadow-lg border-4 border-blue-800 transform hover:scale-105 transition-transform duration-500"
+          />
+        </div>
+
+        {/* RIGHT - TEXT */}
+        <div
+          className="bg-white/70 backdrop-blur-md p-6 rounded-xl shadow-lg transition-all duration-700"
+          data-aos="fade-left"
+        >
+          <h2 className="text-3xl font-bold text-blue-800 mb-4">About Me</h2>
+          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+            Hello! I’m a passionate aspiring UI/UX designer and data analytics
+            enthusiast based in Manila. Equipped with tools like React.js,
+            Tailwind CSS, Figma, Power BI, Microsoft Access, and more. I make
+            interactive, data-driven digital experiences that bring ideas to
+            life.
+          </p>
+          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+            Currently finishing my BS in Information Technology at the
+            Technological University of the Philippines – Manila (Graduating
+            August 2025). I also interned at the National Telecommunications
+            Commission as an Application Developer, helping digitalize employee
+            records using Microsoft Access and Power BI.
+          </p>
+
+          {/* Resume Button */}
+          <a
+            href="/decastro-resume.pdf"
+            download
+            className="inline-flex items-center gap-2 bg-blue-800 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 hover:scale-105 transform transition duration-300"
+          >
+            <FiDownload className="text-xl" />
+            Download Resume
+          </a>
+        </div>
+      </div>
+
+      {/* Skills Section */}
+      <div className="max-w-6xl mx-auto mt-20 px-6">
+        <h3
+          className="text-2xl md:text-3xl font-bold text-blue-800 mb-10 text-center"
+          data-aos="fade-up"
+        >
+          Skills & Tools
+        </h3>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-800">
+          {[
+            {
+              title: "Web Development",
+              icon: <FaCode className="text-blue-700" />,
+              items: [
+                "HTML, CSS, Tailwind CSS, JavaScript, React.js",
+                "Basic Python, C, and C# scripting",
+              ],
+            },
+            {
+              title: "Back-End Development",
+              icon: <FaDatabase className="text-blue-700" />,
+              items: ["Node.js, Python for server-side", "MySQL, MS Access"],
+            },
+            {
+              title: "UI/UX Design",
+              icon: <FaPalette className="text-blue-700" />,
+              items: [
+                "Figma proficiency",
+                "Clean, user-centered interface design",
+              ],
+            },
+            {
+              title: "Data Analytics / BI",
+              icon: <FaChartBar className="text-blue-700" />,
+              items: [
+                "Power BI dashboards & reports",
+                "Excel + Access integration",
+              ],
+            },
+            {
+              title: "Other Tech Skills",
+              icon: <FaShieldAlt className="text-blue-700" />,
+              items: [
+                "Basic Cybersecurity & AI awareness",
+                "Git & GitHub for version control",
+                "Advanced Microsoft Office 365",
+              ],
+            },
+            {
+              title: "Strengths",
+              icon: <FaTools className="text-blue-700" />,
+              items: [
+                "Problem-solving & critical thinking",
+                "Adaptability & communication",
+                "Teamwork & independence",
+              ],
+            },
+          ].map((skill, index) => (
+            <div
+              key={index}
+              className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
+              data-aos="zoom-in-up"
+            >
+              <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+                {skill.icon}
+                {skill.title}
+              </h4>
+              <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+                {skill.items.map((item, idx) => (
+                  <li key={idx}>{item}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default About;
