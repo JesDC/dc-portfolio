@@ -1,11 +1,5 @@
 import React, { useEffect } from "react";
-import {
-  FaPhoneAlt,
-  FaGithub,
-  FaLinkedin,
-  FaFacebook,
-  FaInstagram,
-} from "react-icons/fa";
+import { FaPhoneAlt } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -35,11 +29,11 @@ const Contact = () => {
           data-aos-delay="100"
         >
           Let’s connect! Whether it’s for a job opportunity, collaboration, or
-          just a friendly hello. I would love to hear from you.
+          just a friendly hello—I’d love to hear from you.
         </p>
 
         {/* Contact Info Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-12 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-16 text-left">
           {/* Email Card */}
           <div
             className="bg-white/60 backdrop-blur-md border border-blue-100 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
@@ -47,8 +41,8 @@ const Contact = () => {
           >
             <h3 className="text-xl font-semibold text-blue-800 mb-2">Email</h3>
             <div className="flex items-center gap-3 text-gray-700">
-              <MdEmail className="text-2xl text-blue-700" />
-              <span>jm.decastro38@gmail.com</span>
+              <MdEmail className="text-2xl text-blue-700 hover:animate-bounce" />
+              <span className="break-words">jm.decastro38@gmail.com</span>
             </div>
           </div>
 
@@ -59,56 +53,11 @@ const Contact = () => {
           >
             <h3 className="text-xl font-semibold text-blue-800 mb-2">Phone</h3>
             <div className="flex items-center gap-3 text-gray-700">
-              <FaPhoneAlt className="text-lg text-blue-700" />
+              <FaPhoneAlt className="text-lg text-blue-700 hover:animate-bounce" />
               <a href="tel:09292034977" className="hover:underline">
                 0929-203-4977
               </a>
             </div>
-          </div>
-        </div>
-
-        {/* Social Links */}
-        <div data-aos="zoom-in">
-          <h3 className="text-lg font-semibold text-blue-800 mb-4">
-            Connect with me
-          </h3>
-          <div className="flex justify-center gap-6 text-2xl text-blue-800">
-            <a
-              href="https://github.com/JesDC"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-              className="hover:text-blue-600 transition"
-            >
-              <FaGithub />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jestro-maverick-de-castro-1058162a3/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-              className="hover:text-blue-600 transition"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://www.facebook.com/JmDC1923/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Facebook"
-              className="hover:text-blue-600 transition"
-            >
-              <FaFacebook />
-            </a>
-            <a
-              href="https://www.instagram.com/jm_saurus/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Instagram"
-              className="hover:text-blue-600 transition"
-            >
-              <FaInstagram />
-            </a>
           </div>
         </div>
       </div>
