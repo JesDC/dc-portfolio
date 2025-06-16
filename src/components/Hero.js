@@ -5,13 +5,13 @@ function Hero() {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex flex-col md:flex-row items-center justify-between
+      className="relative min-h-screen flex flex-col-reverse md:flex-row items-center justify-center
                  bg-gradient-to-br from-white via-blue-50 to-white
-                 px-6 md:px-20 py-20 gap-12 overflow-hidden"
+                 px-4 sm:px-6 md:px-20 py-16 md:py-24 gap-10 sm:gap-12 overflow-hidden"
       aria-label="Introduction Section"
     >
-      {/* Animated SVG Blob Background */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] -z-10 opacity-30 pointer-events-none select-none">
+      {/* SVG Background Blob */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] sm:w-[400px] h-[300px] sm:h-[400px] -z-10 opacity-30 pointer-events-none select-none">
         <svg
           viewBox="0 0 200 200"
           xmlns="http://www.w3.org/2000/svg"
@@ -25,22 +25,22 @@ function Hero() {
         </svg>
       </div>
 
-      {/* Left Side: Text Content */}
+      {/* Left: Text Content */}
       <div
-        className="flex-1 z-10 bg-white/70 backdrop-blur-md p-6 rounded-xl shadow-lg transition-all duration-700"
+        className="flex-1 z-10 bg-white/70 backdrop-blur-md p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-700 text-center md:text-left"
         data-aos="fade-right"
         data-aos-duration="1000"
         data-aos-delay="200"
       >
-        <h1 className="text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">
           Hi, I’m Jestro Maverick de Castro 👋
         </h1>
         <p
-          className="text-lg md:text-xl text-blue-800 mb-6 max-w-xl leading-relaxed"
+          className="text-base sm:text-lg md:text-xl text-blue-800 mb-6 leading-relaxed"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <span className="block text-xl font-bold text-blue-700 mb-2">
+          <span className="block text-lg sm:text-xl font-bold text-blue-700 mb-2">
             Crafting experiences. Coding with purpose.
           </span>
           I’m a passionate aspiring UI/UX designer and data analytics enthusiast
@@ -57,9 +57,9 @@ function Hero() {
         </a>
       </div>
 
-      {/* Right Side: Profile Image */}
+      {/* Right: Profile Image */}
       <div
-        className="flex-1 flex justify-center z-10"
+        className="flex-1 flex justify-center z-10 mb-10 md:mb-0"
         data-aos="fade-left"
         data-aos-duration="1000"
         data-aos-delay="400"
@@ -67,7 +67,7 @@ function Hero() {
         <img
           src={yourPhoto}
           alt="Portrait of J"
-          className="w-72 h-72 object-cover rounded-full shadow-xl border-4 border-blue-300 
+          className="w-52 sm:w-64 md:w-72 h-52 sm:h-64 md:h-72 object-cover rounded-full shadow-xl border-4 border-blue-300 
                      transition-transform duration-500 hover:scale-105 animate-fade-in"
         />
       </div>

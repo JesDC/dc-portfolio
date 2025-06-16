@@ -18,17 +18,19 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="py-24 bg-gradient-to-b from-white via-blue-50 to-white text-gray-800"
+      className="py-20 sm:py-24 bg-gradient-to-b from-white via-blue-50 to-white text-gray-800"
     >
-      <div className="max-w-4xl mx-auto px-6 text-center">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 text-center">
+        {/* Title */}
         <h2
-          className="text-4xl font-extrabold text-blue-900 mb-6"
+          className="text-3xl sm:text-4xl font-extrabold text-blue-900 mb-6"
           data-aos="fade-up"
         >
           Contact Me
         </h2>
+
         <p
-          className="text-lg mb-12 text-gray-700"
+          className="text-base sm:text-lg mb-12 text-gray-700"
           data-aos="fade-up"
           data-aos-delay="100"
         >
@@ -36,44 +38,47 @@ const Contact = () => {
           just a friendly hello — I’d love to hear from you.
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 text-left mb-12">
-          {/* Email */}
+        {/* Contact Info Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 mb-12 text-left">
+          {/* Email Card */}
           <div
             className="bg-white/60 backdrop-blur-md border border-blue-100 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
             data-aos="fade-right"
           >
             <h3 className="text-xl font-semibold text-blue-800 mb-2">Email</h3>
-            <div className="flex items-center text-gray-700 gap-2">
+            <div className="flex items-center gap-3 text-gray-700">
               <MdEmail className="text-2xl text-blue-700" />
               <span>jm.decastro38@gmail.com</span>
             </div>
           </div>
 
-          {/* Phone */}
+          {/* Phone Card */}
           <div
             className="bg-white/60 backdrop-blur-md border border-blue-100 rounded-xl p-6 shadow-md hover:shadow-xl transition duration-300"
             data-aos="fade-left"
           >
             <h3 className="text-xl font-semibold text-blue-800 mb-2">Phone</h3>
-            <div className="flex items-center text-gray-700 gap-2">
-              <FaPhoneAlt className="text-base text-blue-700" />
-              <span>0929-203-4977</span>
+            <div className="flex items-center gap-3 text-gray-700">
+              <FaPhoneAlt className="text-lg text-blue-700" />
+              <a href="tel:09292034977" className="hover:underline">
+                0929-203-4977
+              </a>
             </div>
           </div>
         </div>
 
-        {/* Socials */}
+        {/* Social Links */}
         <div data-aos="zoom-in">
-          <h3 className="text-xl font-semibold text-blue-800 mb-4">
+          <h3 className="text-lg font-semibold text-blue-800 mb-4">
             Connect with me
           </h3>
-          <div className="flex justify-center gap-6">
+          <div className="flex justify-center gap-6 text-2xl text-blue-800">
             <a
               href="https://github.com/JesDC"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-800 hover:text-blue-600 text-2xl transition"
               aria-label="GitHub"
+              className="hover:text-blue-600 transition"
             >
               <FaGithub />
             </a>
@@ -81,8 +86,8 @@ const Contact = () => {
               href="https://www.linkedin.com/in/jestro-maverick-de-castro-1058162a3/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-800 hover:text-blue-600 text-2xl transition"
               aria-label="LinkedIn"
+              className="hover:text-blue-600 transition"
             >
               <FaLinkedin />
             </a>
@@ -90,8 +95,8 @@ const Contact = () => {
               href="https://www.facebook.com/JmDC1923/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-800 hover:text-blue-600 text-2xl transition"
               aria-label="Facebook"
+              className="hover:text-blue-600 transition"
             >
               <FaFacebook />
             </a>
@@ -99,8 +104,8 @@ const Contact = () => {
               href="https://www.instagram.com/jm_saurus/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-800 hover:text-blue-600 text-2xl transition"
               aria-label="Instagram"
+              className="hover:text-blue-600 transition"
             >
               <FaInstagram />
             </a>

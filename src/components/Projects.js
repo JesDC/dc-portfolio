@@ -42,47 +42,47 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="py-24 bg-gradient-to-br from-white via-blue-50 to-white"
+      className="py-20 bg-gradient-to-br from-white via-blue-50 to-white"
     >
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8">
         <h2
-          className="text-4xl md:text-5xl font-extrabold text-center text-blue-900 mb-16"
+          className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-16"
           data-aos="fade-up"
         >
           My UI/UX Projects
         </h2>
 
-        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
             <div
               key={index}
               data-aos="zoom-in-up"
-              className="backdrop-blur-md bg-white/70 border border-blue-100 rounded-xl shadow-lg overflow-hidden group transform transition duration-300 hover:scale-105"
+              className="group bg-white/80 backdrop-blur-sm border border-blue-100 rounded-2xl shadow-lg overflow-hidden transition-all duration-300 hover:shadow-xl hover:scale-[1.02]"
             >
               <div className="relative">
                 <img
                   src={project.imgUrl}
                   alt={project.title}
-                  className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
+                  className="w-full h-52 sm:h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                <div className="absolute inset-0 bg-blue-900 bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-white bg-blue-800 hover:bg-blue-700 px-6 py-2 rounded-full font-medium shadow-lg transition"
+                    className="text-white bg-blue-800 hover:bg-blue-700 px-5 py-2 rounded-full text-sm sm:text-base font-semibold shadow-lg transition"
                   >
                     View Design
                   </a>
                 </div>
               </div>
-              <div className="p-5">
-                <h3 className="text-xl font-bold text-blue-800 mb-1">
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl font-bold text-blue-800 mb-2">
                   {project.title}
                 </h3>
-                <p className="text-sm text-gray-500 italic mb-2">
-                  Role: {project.role}
-                </p>
+                <span className="inline-block mb-2 text-xs font-medium bg-blue-100 text-blue-700 px-3 py-1 rounded-full">
+                  {project.role}
+                </span>
                 <p className="text-gray-700 text-sm leading-relaxed">
                   {project.description}
                 </p>

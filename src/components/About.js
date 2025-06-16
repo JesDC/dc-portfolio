@@ -14,9 +14,10 @@ const About = () => {
   return (
     <section
       id="about"
-      className="py-24 bg-gradient-to-br from-white via-blue-50 to-white text-gray-800"
+      className="py-20 sm:py-24 bg-gradient-to-br from-white via-blue-50 to-white text-gray-800"
     >
-      <div className="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
+      {/* MAIN GRID: IMAGE + INFO */}
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         {/* LEFT - IMAGE */}
         <div
           className="flex justify-center md:justify-end"
@@ -24,53 +25,58 @@ const About = () => {
         >
           <img
             src={myPic}
-            alt="Profile"
-            className="w-72 h-72 object-cover rounded-full shadow-lg border-4 border-blue-800 transform hover:scale-105 transition-transform duration-500"
+            alt="Portrait of Jestro Maverick de Castro"
+            className="w-56 sm:w-64 md:w-72 h-56 sm:h-64 md:h-72 object-cover rounded-full shadow-lg border-4 border-blue-800 transform hover:scale-105 transition-transform duration-500"
           />
         </div>
 
-        {/* RIGHT - TEXT */}
+        {/* RIGHT - TEXT CONTENT */}
         <div
-          className="bg-white/70 backdrop-blur-md p-6 rounded-xl shadow-lg transition-all duration-700"
+          className="bg-white/70 backdrop-blur-md p-6 sm:p-8 rounded-xl shadow-lg transition-all duration-700"
           data-aos="fade-left"
         >
-          <h2 className="text-3xl font-bold text-blue-800 mb-4">About Me</h2>
-          <p className="text-gray-700 text-lg leading-relaxed mb-4">
+          <h2 className="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 text-center md:text-left">
+            About Me
+          </h2>
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
             Hello! I’m a passionate aspiring UI/UX designer and data analytics
             enthusiast based in Manila. Equipped with tools like React.js,
-            Tailwind CSS, Figma, Power BI, Microsoft Access, and more. I make
+            Tailwind CSS, Figma, Power BI, Microsoft Access, and more — I build
             interactive, data-driven digital experiences that bring ideas to
             life.
           </p>
-          <p className="text-gray-700 text-lg leading-relaxed mb-6">
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
             Currently finishing my BS in Information Technology at the
             Technological University of the Philippines – Manila (Graduating
-            August 2025). I also interned at the National Telecommunications
-            Commission as an Application Developer, helping digitalize employee
-            records using Microsoft Access and Power BI.
+            August 2025). I interned at the National Telecommunications
+            Commission as an Application Developer, where I helped digitalize
+            employee records using Microsoft Access and Power BI.
           </p>
 
-          {/* Resume Button */}
-          <a
-            href="/decastro-resume.pdf"
-            download
-            className="inline-flex items-center gap-2 bg-blue-800 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 hover:scale-105 transform transition duration-300"
-          >
-            <FiDownload className="text-xl" />
-            Download Resume
-          </a>
+          {/* RESUME DOWNLOAD */}
+          <div className="text-center md:text-left">
+            <a
+              href="/decastro-resume.pdf"
+              download
+              className="inline-flex items-center gap-2 bg-blue-800 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 hover:scale-105 transform transition duration-300"
+            >
+              <FiDownload className="text-xl" />
+              Download Resume
+            </a>
+          </div>
         </div>
       </div>
 
-      {/* Skills Section */}
-      <div className="max-w-6xl mx-auto mt-20 px-6">
+      {/* SKILLS & TOOLS */}
+      <div className="max-w-6xl mx-auto mt-20 px-4 sm:px-6">
         <h3
-          className="text-2xl md:text-3xl font-bold text-blue-800 mb-10 text-center"
+          className="text-2xl sm:text-3xl font-bold text-blue-800 mb-10 text-center"
           data-aos="fade-up"
         >
           Skills & Tools
         </h3>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 text-gray-800">
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-gray-800">
           {[
             {
               title: "Web Development",
@@ -124,6 +130,7 @@ const About = () => {
               key={index}
               className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
               data-aos="zoom-in-up"
+              data-aos-delay={index * 100}
             >
               <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
                 {skill.icon}

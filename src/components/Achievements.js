@@ -74,7 +74,7 @@ const seminars = [
 
 const Achievements = () => {
   useEffect(() => {
-    AOS.init({ duration: 1000 });
+    AOS.init({ duration: 1000, once: true });
   }, []);
 
   return (
@@ -82,7 +82,7 @@ const Achievements = () => {
       id="achievements"
       className="py-24 bg-gradient-to-b from-white via-blue-50 to-white text-gray-800"
     >
-      <div className="max-w-6xl mx-auto px-6">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <h2
           className="text-4xl font-extrabold text-center text-blue-900 mb-16"
           data-aos="fade-up"
@@ -90,45 +90,52 @@ const Achievements = () => {
           Certifications & Achievements
         </h2>
 
-        {/* Certifications */}
-        <div className="mb-20" data-aos="fade-up">
-          <h3 className="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-2">
+        {/* Certifications Section */}
+        <div className="mb-20">
+          <h3
+            className="text-2xl font-bold text-blue-800 mb-6 flex items-center gap-2"
+            data-aos="fade-up"
+          >
             <FaCertificate className="text-blue-600" />
             Certifications
           </h3>
-          <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-            {certifications.map((item, index) => (
+
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {certifications.map((cert, index) => (
               <div
                 key={index}
-                className="bg-white/70 backdrop-blur-md p-6 rounded-xl border border-blue-100 shadow-md hover:shadow-lg transition duration-300"
+                className="bg-white/70 backdrop-blur-md p-6 rounded-xl border border-blue-100 shadow-md hover:shadow-lg transition-all duration-300"
                 data-aos="zoom-in"
+                data-aos-delay={index * 100}
               >
-                <h4 className="text-lg font-bold text-blue-800 mb-1">
-                  {item.title}
+                <h4 className="text-lg font-semibold text-blue-800 mb-1">
+                  {cert.title}
                 </h4>
                 <p className="text-sm text-gray-700 mb-4">
-                  {item.issuer} — {item.date}
+                  {cert.issuer} — {cert.date}
                 </p>
-                <div className="flex gap-3 flex-wrap">
-                  {item.file && (
+                <div className="flex flex-wrap gap-3">
+                  {cert.file && (
                     <a
-                      href={item.file}
+                      href={cert.file}
                       download
-                      className="inline-flex items-center gap-2 bg-blue-800 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 hover:scale-105 transition-all duration-300"
+                      className="inline-flex items-center gap-2 bg-blue-800 text-white px-4 py-2 rounded-full shadow hover:bg-blue-700 hover:scale-105 transition-all"
+                      aria-label={`Download ${cert.title} PDF`}
                     >
                       <FaDownload />
-                      Download PDF
+                      PDF
                     </a>
                   )}
-                  {item.badge && (
+                  {cert.badge && (
                     <a
-                      href={item.badge}
+                      href={cert.badge}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="inline-flex items-center gap-2 border border-blue-700 text-blue-700 px-4 py-2 rounded-full shadow hover:bg-blue-50 hover:scale-105 transition-all duration-300"
+                      className="inline-flex items-center gap-2 border border-blue-700 text-blue-700 px-4 py-2 rounded-full shadow hover:bg-blue-50 hover:scale-105 transition-all"
+                      aria-label={`View badge for ${cert.title}`}
                     >
                       <FaExternalLinkAlt />
-                      View Badge
+                      Badge
                     </a>
                   )}
                 </div>
@@ -137,32 +144,32 @@ const Achievements = () => {
           </div>
         </div>
 
-        {/* Dean’s List */}
+        {/* Dean's List Section */}
         <div className="mb-20" data-aos="fade-up">
           <h3 className="text-2xl font-bold text-blue-800 mb-4 flex items-center gap-2">
-            <FaAward className="text-yellow-600" />
+            <FaAward className="text-yellow-500" />
             Dean’s List Awards
           </h3>
           <ul className="list-disc list-inside pl-2 text-gray-700 space-y-2">
-            {deansList.map((item, index) => (
+            {deansList.map((entry, index) => (
               <li key={index} className="text-md">
-                {item}
+                {entry}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Seminars/Webinars */}
+        {/* Seminars Section */}
         <div data-aos="fade-up">
           <h3 className="text-2xl font-bold text-blue-800 mb-4 flex items-center gap-2">
             <FaCertificate className="text-blue-600" />
             Seminars & Webinars Attended
           </h3>
           <ul className="list-disc list-inside pl-2 text-gray-700 space-y-2">
-            {seminars.map((item, index) => (
+            {seminars.map((seminar, index) => (
               <li key={index}>
-                <span className="font-semibold">{item.title}</span> —{" "}
-                {item.organizer} ({item.date})
+                <span className="font-semibold">{seminar.title}</span> —{" "}
+                {seminar.organizer} ({seminar.date})
               </li>
             ))}
           </ul>
