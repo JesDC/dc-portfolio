@@ -33,5 +33,13 @@ module.exports = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/forms"), // optional: better form styling
+    require("tailwind-scrollbar"), // optional: for custom scrollbars
+  ],
+  corePlugins: {
+    scrollBehavior: true, // enables smooth scrolling utility (if needed)
+  },
+  darkMode: "class", // optional: enable dark mode support via class strategy
 };
