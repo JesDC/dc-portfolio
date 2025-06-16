@@ -26,13 +26,19 @@ const Navbar = () => {
         offset={-100}
         componentTag="ul"
       >
-        {navItems.map((item) => (
-          <li key={item.id}>
+        {navItems.map((item, index) => (
+          <li
+            key={item.id}
+            data-aos="fade-down"
+            data-aos-delay={`${index * 100}`}
+            data-aos-duration="600"
+          >
             <a
               href={`#${item.id}`}
-              className="hover:text-primary transition-colors duration-300"
+              className="relative group hover:text-primary transition-colors duration-300"
             >
               {item.label}
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </li>
         ))}
@@ -40,7 +46,9 @@ const Navbar = () => {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden text-blue-900 focus:outline-none text-2xl"
+        className={`md:hidden text-blue-900 focus:outline-none text-2xl transition-transform duration-300 ${
+          isOpen ? "rotate-90 scale-110" : "rotate-0 scale-100"
+        }`}
         onClick={toggleMenu}
         aria-label="Toggle menu"
       >
@@ -49,13 +57,13 @@ const Navbar = () => {
 
       {/* Mobile Navigation Dropdown */}
       {isOpen && (
-        <ul className="absolute top-16 left-0 w-full bg-white shadow-md py-4 flex flex-col items-center space-y-4 md:hidden z-40">
+        <ul className="animate-in slide-in-from-top-4 fade-in absolute top-16 left-0 w-full bg-white shadow-md py-4 flex flex-col items-center space-y-4 md:hidden z-40">
           {navItems.map((item) => (
             <li key={item.id}>
               <a
                 href={`#${item.id}`}
                 onClick={() => setIsOpen(false)}
-                className="text-blue-800 hover:text-primary font-medium transition"
+                className="text-blue-800 hover:text-primary font-medium transition-colors duration-300"
               >
                 {item.label}
               </a>
