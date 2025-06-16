@@ -19,14 +19,11 @@ const About = () => {
       {/* MAIN GRID: IMAGE + INFO */}
       <div className="max-w-6xl mx-auto px-4 sm:px-6 grid grid-cols-1 md:grid-cols-2 items-center gap-12">
         {/* LEFT - IMAGE */}
-        <div
-          className="flex justify-center md:justify-end"
-          data-aos="fade-right"
-        >
+        <div className="flex justify-center md:justify-end" data-aos="zoom-in">
           <img
             src={myPic}
             alt="Portrait of Jestro Maverick de Castro"
-            className="w-56 sm:w-64 md:w-72 h-56 sm:h-64 md:h-72 object-cover rounded-full shadow-lg border-4 border-blue-800 transform hover:scale-105 transition-transform duration-500"
+            className="w-56 sm:w-64 md:w-72 h-56 sm:h-64 md:h-72 object-cover rounded-full shadow-lg border-4 border-blue-800 transform hover:scale-105 hover:rotate-1 transition-transform duration-500"
           />
         </div>
 
@@ -38,19 +35,23 @@ const About = () => {
           <h2 className="text-2xl sm:text-3xl font-bold text-blue-800 mb-4 text-center md:text-left">
             About Me
           </h2>
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
-            I’m a passionate aspiring UI/UX designer and data analytics
-            enthusiast based in Manila. Equipped with tools like React.js,
-            Tailwind CSS, Figma, Power BI, Microsoft Access, and more. I make
-            interactive, data-driven digital experiences that bring ideas to
-            life.
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4 text-center md:text-left">
+            Hello! I’m{" "}
+            <span className="font-semibold text-blue-800">
+              Jestro Maverick de Castro
+            </span>
+            , a tech-savvy creative from Manila with a passion for building
+            sleek, user-centered designs and turning data into meaningful
+            insights. Whether it's coding interfaces, designing Figma
+            prototypes, or visualizing analytics in Power BI as admire turning
+            ideas into real, interactive products.
           </p>
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center md:text-left">
             I am currently pursuing my Bachelor of Science in Information
             Technology in the Technological University of the Philippines –
             Manila, with graduation expected in August 2025.
           </p>
-          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6">
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center md:text-left">
             While interning at the National Telecommunications Commission (NTC),
             I was working as an Application Developer and a part of the core
             development team of the NTC Scanner Checker Mobile App, where we
@@ -65,9 +66,10 @@ const About = () => {
             <a
               href="/decastro-resume.pdf"
               download
-              className="inline-flex items-center gap-2 bg-blue-800 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 hover:scale-105 transform transition duration-300"
+              aria-label="Download Resume"
+              className="inline-flex items-center gap-2 bg-blue-800 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 hover:scale-105 transform transition duration-300 group"
             >
-              <FiDownload className="text-xl" />
+              <FiDownload className="text-xl group-hover:animate-bounce" />
               Download Resume
             </a>
           </div>
@@ -75,7 +77,7 @@ const About = () => {
       </div>
 
       {/* SKILLS & TOOLS */}
-      <div className="max-w-6xl mx-auto mt-20 px-4 sm:px-6">
+      <div className="max-w-6xl mx-auto mt-10 px-4 sm:px-6">
         <h3
           className="text-2xl sm:text-3xl font-bold text-blue-800 mb-10 text-center"
           data-aos="fade-up"
@@ -96,7 +98,7 @@ const About = () => {
             {
               title: "Back-End Development",
               icon: <FaDatabase className="text-blue-700" />,
-              items: ["Node.js, Python for server-side", "MySQL, MS Access"],
+              items: ["Node.js, XAMPP for server-side", "MySQL, MS Access"],
             },
             {
               title: "UI/UX Design",
