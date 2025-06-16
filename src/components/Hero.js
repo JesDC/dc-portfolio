@@ -1,5 +1,6 @@
 import React from "react";
 import yourPhoto from "../assets/mypic.jpg";
+// import { Typewriter } from "react-simple-typewriter";
 
 function Hero() {
   return (
@@ -32,22 +33,38 @@ function Hero() {
         data-aos-duration="1000"
         data-aos-delay="200"
       >
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-blue-900 mb-4">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 bg-clip-text text-transparent mb-4">
           Hi, I’m Jestro Maverick de Castro 👋
         </h1>
+
+        {/* Tagline */}
+        <div className="text-lg sm:text-xl font-bold text-blue-700 mb-2">
+          Crafting experiences. Design and code with purpose.
+          {/* 
+          <Typewriter
+            words={["Crafting experiences. Design and code with purpose."]}
+            loop
+            cursor
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={2000}
+          />
+          */}
+        </div>
+
+        {/* Description */}
         <p
           className="text-base sm:text-lg md:text-xl text-blue-800 mb-6 leading-relaxed"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          <span className="block text-lg sm:text-xl font-bold text-blue-700 mb-2">
-            Crafting experiences. Coding with purpose.
-          </span>
           I’m a passionate aspiring UI/UX designer and data analytics enthusiast
           based in Manila. Equipped with tools like React.js, Tailwind CSS,
-          Figma, Power BI, Microsoft Access, and more. I make interactive,
+          Figma, Power BI, Microsoft Access, and more—I create interactive,
           data-driven digital experiences that bring ideas to life.
         </p>
+
+        {/* CTA Button */}
         <a
           href="#projects"
           className="bg-blue-800 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-full 
@@ -66,9 +83,9 @@ function Hero() {
       >
         <img
           src={yourPhoto}
-          alt="Portrait of J"
-          className="w-52 sm:w-64 md:w-72 h-52 sm:h-64 md:h-72 object-cover rounded-full shadow-xl border-4 border-blue-300 
-                     transition-transform duration-500 hover:scale-105 animate-fade-in"
+          alt="Portrait of Jestro Maverick de Castro"
+          className="w-52 sm:w-64 md:w-72 h-52 sm:h-64 md:h-72 object-cover rounded-full border-4 border-blue-300 
+                   shadow-xl animate-glow"
         />
       </div>
     </section>
