@@ -39,9 +39,9 @@ const About = () => {
             About Me
           </h2>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-4">
-            Hello! I’m a passionate aspiring UI/UX designer and data analytics
+            I’m a passionate aspiring UI/UX designer and data analytics
             enthusiast based in Manila. Equipped with tools like React.js,
-            Tailwind CSS, Figma, Power BI, Microsoft Access, and more — I build
+            Tailwind CSS, Figma, Power BI, Microsoft Access, and more. I make
             interactive, data-driven digital experiences that bring ideas to
             life.
           </p>
