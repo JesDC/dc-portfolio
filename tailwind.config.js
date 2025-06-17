@@ -16,6 +16,7 @@ module.exports = {
         glow: "glow 3s ease-in-out infinite",
         "bounce-slow": "bounceSlow 4s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
+        waveMotion: "waveMotion 8s ease-in-out infinite", // 👈 New
       },
       keyframes: {
         fadeIn: {
@@ -39,20 +40,17 @@ module.exports = {
           },
         },
         bounceSlow: {
-          "0%, 100%": {
-            transform: "translateY(0)",
-          },
-          "50%": {
-            transform: "translateY(-8px)",
-          },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
         },
         float: {
-          "0%, 100%": {
-            transform: "translateY(0)",
-          },
-          "50%": {
-            transform: "translateY(-10px)",
-          },
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-10px)" },
+        },
+        waveMotion: {
+          // 👈 New keyframe for SVG wave animation
+          "0%, 100%": { transform: "translateY(0px)" },
+          "50%": { transform: "translateY(8px)" },
         },
       },
       backgroundSize: {
@@ -62,11 +60,10 @@ module.exports = {
   },
   plugins: [
     require("tailwindcss-animate"),
-    require("@tailwindcss/forms"), // optional: better form styling
-    require("tailwind-scrollbar"), // optional: for custom scrollbars
+    require("@tailwindcss/forms"),
+    require("tailwind-scrollbar"),
   ],
   corePlugins: {
     scrollBehavior: true,
   },
-  darkMode: "class",
 };
