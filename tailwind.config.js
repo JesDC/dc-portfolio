@@ -4,19 +4,19 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#1e3a8a", // deep blue
-        secondary: "#60a5fa", // sky blue
-        accent: "#3b82f6", // standard blue
+        primary: "#1e3a8a", // Deep blue
+        secondary: "#60a5fa", // Sky blue
+        accent: "#3b82f6", // Standard blue
       },
       animation: {
         "fade-in": "fadeIn 1s ease-in-out",
         "fade-in-down": "fadeInDown 0.8s ease-in-out",
-        gradient: "gradientBG 10s ease infinite",
-        pulseSlow: "pulse 4s infinite",
+        "pulse-slow": "pulseSlow 4s infinite",
         glow: "glow 3s ease-in-out infinite",
-        "bounce-slow": "bounceSlow 4s ease-in-out infinite",
         float: "float 6s ease-in-out infinite",
-        waveMotion: "waveMotion 8s ease-in-out infinite", // 👈 New
+        gradient: "gradientBG 10s ease infinite",
+        "bounce-slow": "bounceSlow 1.8s ease-in-out infinite",
+        waveMotion: "waveMotion 8s ease-in-out infinite",
       },
       keyframes: {
         fadeIn: {
@@ -27,28 +27,31 @@ module.exports = {
           "0%": { opacity: 0, transform: "translateY(-10px)" },
           "100%": { opacity: 1, transform: "translateY(0)" },
         },
-        gradientBG: {
-          "0%, 100%": { backgroundPosition: "0% 50%" },
-          "50%": { backgroundPosition: "100% 50%" },
+        pulseSlow: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0.5 },
         },
         glow: {
           "0%, 100%": {
-            boxShadow: "0 0 0px rgba(96, 165, 250, 0.5)",
+            boxShadow: "0 0 0px rgba(96, 165, 250, 0.4)",
           },
           "50%": {
-            boxShadow: "0 0 25px rgba(96, 165, 250, 0.7)",
+            boxShadow: "0 0 20px rgba(96, 165, 250, 0.8)",
           },
-        },
-        bounceSlow: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-8px)" },
         },
         float: {
           "0%, 100%": { transform: "translateY(0)" },
           "50%": { transform: "translateY(-10px)" },
         },
+        bounceSlow: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-6px)" },
+        },
+        gradientBG: {
+          "0%, 100%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+        },
         waveMotion: {
-          // 👈 New keyframe for SVG wave animation
           "0%, 100%": { transform: "translateY(0px)" },
           "50%": { transform: "translateY(8px)" },
         },
