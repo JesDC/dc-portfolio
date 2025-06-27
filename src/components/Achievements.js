@@ -39,10 +39,23 @@ const certifications = [
     file: "/certificates/networking-basics.pdf",
   },
   {
-    title: "Intro to Machine Learning",
-    issuer: "AWS",
-    date: "November 11, 2024",
-    file: "/certificates/aws-cert.pdf",
+    title: "Digital Skills: User Experience",
+    issuer: "Accenture (via FutureLearn)",
+    date: "June 24, 2025",
+    file: "/certificates/ux.pdf",
+  },
+  {
+    title: "Creating a Great User Experience for Mobile Apps",
+    issuer:
+      "University of Leeds, Click Start and Insitute of Coding (via FutureLearn)",
+    date: "June 25, 2025",
+    file: "/certificates/uxformobile.pdf",
+  },
+  {
+    title: "Digital Skills: Web Analytics",
+    issuer: "Accenture (via FutureLearn)",
+    date: "June 27, 2025",
+    file: "/certificates/web-analytics.pdf",
   },
 ];
 
