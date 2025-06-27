@@ -50,7 +50,7 @@ function Hero() {
             delaySpeed={2000}
           />
           */}
-        </div>
+        </div>``
 
         {/* Description */}
         <p
