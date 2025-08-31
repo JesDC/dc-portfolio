@@ -4,15 +4,6 @@ import "aos/dist/aos.css";
 
 const projects = [
   {
-    title: "NTC Scanner Checker Mobile App",
-    description: "A mobile-based exam checker with for examinees.",
-    role: "Application Developer & UI/UX Designer",
-    imgUrl: require("../assets/ntc.jpg"),
-    link: "https://www.figma.com/proto/sNTb3prCWRXtbG19gaDN5s?node-id=0-1&t=9IX0hzOO9DqJOZsg-6",
-    designLink:
-      "https://www.figma.com/design/CArjBPAhPNAFsUDnfq7WxV/Mobile-App?node-id=0-1&t=2GlqIobxuDvMOH00-1",
-  },
-  {
     title: "Stranded Mobile App",
     description:
       "Guidance app to help senior high students choose the right strand.",
