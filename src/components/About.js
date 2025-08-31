@@ -47,18 +47,18 @@ const About = () => {
             interactive products.
           </p>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center md:text-left">
-            I am currently pursuing my Bachelor of Science in Information
-            Technology in the Technological University of the Philippines –
-            Manila, with graduation expected in August 2025.
+            I graduated with a Bachelor of Science in Information Technology
+            from the Technological University of the Philippines – Manila in
+            August 2025.
           </p>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center md:text-left">
             While interning at the National Telecommunications Commission (NTC),
             I was working as an Application Developer and a part of the core
-            development team of the NTC Scanner Checker Mobile App, where we
-            laid the foundation of the mobile application for future
-            development. I also helped in digitizing the records of employees
-            using Microsoft Access and Power BI, thereby supporting the agency's
-            thrust towards data modernization.
+            development team of the Mobile App, where we laid the foundation of
+            the mobile application for future development. I also helped in
+            digitizing the records of employees using Microsoft Access and Power
+            BI, thereby supporting the agency's thrust towards data
+            modernization.
           </p>
 
           {/* RESUME DOWNLOAD */}
@@ -106,6 +106,7 @@ const About = () => {
               items: [
                 "Figma proficiency",
                 "Clean, user-centered interface design",
+                "Working skills in Wordpress",
               ],
             },
             {
