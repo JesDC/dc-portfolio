@@ -42,7 +42,7 @@ const projects = [
       "https://www.figma.com/design/x8E7tnZS6L4EtmjX6GPt1X/Food-App?node-id=0-1&t=5mXCe72Tw1v5vTP1-1",
   },
   {
-    title: "SecureAI: Intelligent Threat Detection",
+    title: "SecureAI: Intelligent Threat Detection Mobile App",
     description:
       "A school activity design of a threat detection and antivirus app concept that provides real-time protection status, file scanning, secure browsing, and data security.",
     role: "UI/UX Designer",
