@@ -31,6 +31,26 @@ const projects = [
     designLink:
       "https://www.figma.com/design/CSmgeR1ZxbWeukKWyHNlkR/Matahum-Inventory-Management-System?node-id=0-1&t=LRgmSbt5D3XwhhJi-1",
   },
+  {
+    title: "Foodie Go Mobile App",
+    description:
+      "A food delivery app concept that lets users browse categories, pick meals, add them to cart, and seamlessly proceed to checkout.",
+    role: "UI/UX Designer",
+    imgUrl: require("../assets/FoodieGo.jpg"),
+    link: "https://www.figma.com/proto/x8E7tnZS6L4EtmjX6GPt1X/Food-App?node-id=1-2&p=f&t=5mXCe72Tw1v5vTP1-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+    designLink:
+      "https://www.figma.com/design/x8E7tnZS6L4EtmjX6GPt1X/Food-App?node-id=0-1&t=5mXCe72Tw1v5vTP1-1",
+  },
+  {
+    title: "SecureAI: Intelligent Threat Detection",
+    description:
+      "A school activity design of a threat detection and antivirus app concept that provides real-time protection status, file scanning, secure browsing, and data security.",
+    role: "UI/UX Designer",
+    imgUrl: require("../assets/SecureAI.png"),
+    link: "http://figma.com/proto/gSNT5OGJ1Fo8bpzDsmlAAj/SecureAI----Intelligent-Threat-Detection?node-id=1-2&p=f&t=l4XVYkQ5baDB9m3C-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2",
+    designLink:
+      "https://www.figma.com/design/gSNT5OGJ1Fo8bpzDsmlAAj/SecureAI----Intelligent-Threat-Detection?node-id=0-1&t=l4XVYkQ5baDB9m3C-1",
+  },
 ];
 
 const Projects = () => {
@@ -48,7 +68,7 @@ const Projects = () => {
           className="text-4xl sm:text-5xl font-extrabold text-center text-blue-900 mb-16"
           data-aos="fade-up"
         >
-          My UI/UX Projects
+          My Projects
         </h2>
 
         <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
