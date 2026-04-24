@@ -40,25 +40,25 @@ const About = () => {
             <span className="font-semibold text-blue-800">
               Jestro Maverick de Castro
             </span>
-            , a enthusiastic person with a passion for building sleek,
-            user-centered designs and turning data into meaningful insights.
-            Whether it's coding interfaces, designing Figma prototypes, or
-            visualizing analytics in Power BI as admire turning ideas into real,
-            interactive products.
+            , an IT graduate from the Technological University of the
+            Philippines – Manila (August 2025). I have experience in government
+            operations, data documentation, inventory systems, and operational
+            reporting within a national agency environment.
           </p>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center md:text-left">
-            I graduated with a Bachelor of Science in Information Technology
-            from the Technological University of the Philippines – Manila in
-            August 2025.
+            I currently support asset lifecycle tracking, procurement processes,
+            inventory auditing, and data reporting, with a focus on accuracy,
+            compliance, and process efficiency.
           </p>
           <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center md:text-left">
-            While interning at the National Telecommunications Commission (NTC),
-            I was working as an Application Developer and a part of the core
-            development team of the Mobile App, where we laid the foundation of
-            the mobile application for future development. I also helped in
-            digitizing the records of employees using Microsoft Access and Power
-            BI, thereby supporting the agency's thrust towards data
-            modernization.
+            I also have experience in UI/UX principles, web systems, and data
+            analytics using tools like Power BI and Microsoft Access. I enjoy
+            working on structured, data-driven systems that improve workflow and
+            usability.
+          </p>
+
+          <p className="text-gray-700 text-base sm:text-lg leading-relaxed mb-6 text-center md:text-left">
+            You can view my full experience and details in my resume below.
           </p>
 
           {/* RESUME DOWNLOAD */}
@@ -86,73 +86,108 @@ const About = () => {
         </h3>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 text-gray-800">
-          {[
-            {
-              title: "Web Development",
-              icon: <FaCode className="text-blue-700" />,
-              items: [
-                "HTML, CSS, Tailwind CSS, JavaScript, React.js",
-                "Basic Python, C, and C# scripting",
-              ],
-            },
-            {
-              title: "Back-End Development",
-              icon: <FaDatabase className="text-blue-700" />,
-              items: ["Node.js, XAMPP for server-side", "MySQL, MS Access"],
-            },
-            {
-              title: "UI/UX Design",
-              icon: <FaPalette className="text-blue-700" />,
-              items: [
-                "Figma proficiency",
-                "Clean, user-centered interface design",
-                "Working skills in Wordpress",
-              ],
-            },
-            {
-              title: "Data Analytics / BI",
-              icon: <FaChartBar className="text-blue-700" />,
-              items: [
-                "Power BI dashboards & reports",
-                "Excel + Access integration",
-              ],
-            },
-            {
-              title: "Other Tech Skills",
-              icon: <FaShieldAlt className="text-blue-700" />,
-              items: [
-                "Basic Cybersecurity & AI awareness",
-                "Git & GitHub for version control",
-                "Advanced Microsoft Office 365",
-              ],
-            },
-            {
-              title: "Strengths",
-              icon: <FaTools className="text-blue-700" />,
-              items: [
-                "Problem-solving & critical thinking",
-                "Adaptability & communication",
-                "Teamwork & independence",
-              ],
-            },
-          ].map((skill, index) => (
-            <div
-              key={index}
-              className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
-              data-aos="zoom-in-up"
-              data-aos-delay={index * 100}
-            >
-              <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
-                {skill.icon}
-                {skill.title}
-              </h4>
-              <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
-                {skill.items.map((item, idx) => (
-                  <li key={idx}>{item}</li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {/* Web Development */}
+          <div
+            className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
+            data-aos="zoom-in-up"
+          >
+            <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+              <FaCode className="text-blue-700" />
+              Web Development
+            </h4>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+              <li>HTML, CSS, Tailwind CSS, JavaScript, React.js</li>
+              <li>Basic C, C#, Node.js, and Python (server-side awareness)</li>
+              <li>MySQL and Microsoft Access for relational data handling</li>
+            </ul>
+          </div>
+
+          {/* UI/UX Design */}
+          <div
+            className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
+            data-aos="zoom-in-up"
+            data-aos-delay="100"
+          >
+            <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+              <FaPalette className="text-blue-700" />
+              UI/UX Design
+            </h4>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+              <li>Figma (intermediate level)</li>
+              <li>User-centered interface design principles</li>
+              <li>Wireframing and prototyping</li>
+            </ul>
+          </div>
+
+          {/* Data & Inventory Support */}
+          <div
+            className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
+            data-aos="zoom-in-up"
+            data-aos-delay="200"
+          >
+            <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+              <FaDatabase className="text-blue-700" />
+              Inventory, Data & Audit Support
+            </h4>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+              <li>Asset tracking and inventory record maintenance</li>
+              <li>Data encoding, validation, and report updating</li>
+              <li>Audit support and documentation compliance</li>
+              <li>Inter-department coordination for operational workflows</li>
+            </ul>
+          </div>
+
+          {/* Data Analytics */}
+          <div
+            className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
+            data-aos="zoom-in-up"
+            data-aos-delay="300"
+          >
+            <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+              <FaChartBar className="text-blue-700" />
+              Data Analytics
+            </h4>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+              <li>Power BI dashboards and reporting</li>
+              <li>Excel and Access data integration</li>
+              <li>Data visualization and structured reporting</li>
+            </ul>
+          </div>
+
+          {/* Technical Support */}
+          <div
+            className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
+            data-aos="zoom-in-up"
+            data-aos-delay="400"
+          >
+            <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+              <FaShieldAlt className="text-blue-700" />
+              Technical Support
+            </h4>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+              <li>Basic troubleshooting for software and hardware issues</li>
+              <li>System and user support for operational tools</li>
+              <li>Problem-solving and issue resolution</li>
+            </ul>
+          </div>
+
+          {/* Core Strengths */}
+          <div
+            className="bg-white/60 backdrop-blur-md p-5 rounded-lg shadow-md border border-blue-100 hover:shadow-lg transition"
+            data-aos="zoom-in-up"
+            data-aos-delay="500"
+          >
+            <h4 className="font-semibold text-lg mb-3 flex items-center gap-2">
+              <FaTools className="text-blue-700" />
+              Core Strengths
+            </h4>
+            <ul className="list-disc list-inside space-y-1 text-gray-700 text-sm">
+              <li>Problem-solving and critical thinking</li>
+              <li>Adaptability and strong communication</li>
+              <li>Team collaboration and independent work</li>
+              <li>Attention to detail and process efficiency</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

@@ -36,7 +36,6 @@ function Hero() {
         <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold bg-gradient-to-r from-blue-700 via-blue-500 to-blue-700 bg-clip-text text-transparent mb-4">
           Hi, I’m Jestro Maverick de Castro 👋
         </h1>
-
         {/* Tagline */}
         <div className="text-lg sm:text-xl font-bold text-blue-700 mb-2">
           Crafting experiences. Design & Code with purpose.
@@ -50,20 +49,23 @@ function Hero() {
             delaySpeed={2000}
           />
           */}
-        </div>``
-
+        </div>
+        ``
         {/* Description */}
         <p
           className="text-base sm:text-lg md:text-xl text-blue-800 mb-6 leading-relaxed"
           data-aos="fade-up"
           data-aos-delay="300"
         >
-          I’m a passionate aspiring UI/UX designer and data analytics enthusiast
-          based in Manila. Equipped with tools like React.js, Tailwind CSS,
-          Figma, Power BI, Microsoft Access, and more.I create interactive,
-          data-driven digital experiences that bring ideas to life.
+          Hi, I’m Jestro Maverick de Castro 👋 An IT graduate with experience in
+          government operations, data documentation, and inventory systems. I
+          currently support asset tracking, procurement documentation, and
+          operational reporting, ensuring data accuracy and process efficiency.
+          I also have working knowledge of UI/UX, web systems, and data
+          analytics using tools like Power BI and Microsoft Access. I am seeking
+          roles in IT audit, data-driven operations, or administrative IT
+          functions where I can apply analytical thinking and technical skills.
         </p>
-
         {/* CTA Button */}
         <a
           href="#projects"
