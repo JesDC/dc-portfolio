@@ -64,7 +64,7 @@ const About = () => {
           {/* RESUME DOWNLOAD */}
           <div className="text-center md:text-left">
             <a
-              href="/decastro-resume.pdf"
+              href="/decastro.pdf"
               download
               aria-label="Download Resume"
               className="inline-flex items-center gap-2 bg-blue-800 text-white px-6 py-2 rounded-full shadow hover:bg-blue-700 hover:scale-105 transform transition duration-300 group"
