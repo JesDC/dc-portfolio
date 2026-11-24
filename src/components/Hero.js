@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import yourPhoto from "../assets/mypic.jpg";
+
 import {
   FaBriefcase,
   FaDatabase,
-  FaLaptopCode,
   FaChartLine,
+  FaLaptopCode,
 } from "react-icons/fa";
 
 function Hero() {
@@ -23,7 +24,7 @@ function Hero() {
     }, 2500);
 
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   const focusAreas = [
     { icon: <FaBriefcase />, label: "Admin Operations" },

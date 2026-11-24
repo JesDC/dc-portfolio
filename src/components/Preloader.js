@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useCallback, useMemo } from "react";
 
 const Preloader = ({ onSkip }) => {
   const [progress, setProgress] = useState(0);
@@ -6,15 +6,18 @@ const Preloader = ({ onSkip }) => {
   const [activeMessage, setActiveMessage] = useState(0);
   const [isExiting, setIsExiting] = useState(false);
 
-  const messages = [
-    "Initializing digital workspace...",
-    "Preparing administrative resources...",
-    "Organizing information and systems...",
-    "Connecting ideas with technology...",
-    "Welcome to my portfolio.",
-  ];
+  const messages = useMemo(
+    () => [
+      "Initializing digital workspace...",
+      "Preparing administrative resources...",
+      "Organizing information and systems...",
+      "Connecting ideas with technology...",
+      "Welcome to my portfolio.",
+    ],
+    [],
+  );
 
-  const finishLoading = () => {
+  const finishLoading = useCallback(() => {
     if (isExiting) return;
 
     setIsExiting(true);
@@ -24,7 +27,7 @@ const Preloader = ({ onSkip }) => {
       setFadeOut(true);
       if (onSkip) onSkip();
     }, 500);
-  };
+  }, [isExiting, onSkip]);
 
   useEffect(() => {
     const progressTimer = setInterval(() => {
@@ -51,7 +54,7 @@ const Preloader = ({ onSkip }) => {
       clearInterval(messageTimer);
       clearTimeout(exitTimer);
     };
-  }, []);
+  }, [finishLoading, messages.length]);
 
   const floatingIcons = [
     { icon: "▤", label: "Records", position: "top-0 left-0", delay: "0s" },
@@ -100,22 +103,18 @@ const Preloader = ({ onSkip }) => {
       >
         {/* Logo area */}
         <div className="relative w-56 h-56 sm:w-64 sm:h-64 flex items-center justify-center mb-8">
-          {/* Orbit rings */}
           <div className="absolute inset-2 rounded-full border border-blue-400/20 animate-[spin_12s_linear_infinite]" />
 
           <div className="absolute inset-7 rounded-full border border-dashed border-blue-300/30 animate-[spin_18s_linear_infinite_reverse]" />
 
           <div className="absolute inset-12 rounded-full border border-blue-400/20" />
 
-          {/* Orbiting dot */}
           <div className="absolute inset-2 animate-[spin_4s_linear_infinite]">
             <div className="w-3 h-3 rounded-full bg-blue-300 shadow-[0_0_15px_#60a5fa]" />
           </div>
 
-          {/* Logo glow */}
           <div className="absolute w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-blue-500/20 blur-3xl animate-pulse" />
 
-          {/* Main logo */}
           <div className="relative z-10 w-32 h-32 sm:w-40 sm:h-40 rounded-full bg-white/5 border border-white/10 backdrop-blur-md flex items-center justify-center shadow-[0_0_50px_rgba(59,130,246,0.2)]">
             <img
               src="/logo.png"
@@ -124,7 +123,6 @@ const Preloader = ({ onSkip }) => {
             />
           </div>
 
-          {/* Floating system icons */}
           {floatingIcons.map((item) => (
             <div
               key={item.label}
@@ -171,7 +169,6 @@ const Preloader = ({ onSkip }) => {
             </span>
           </div>
 
-          {/* Progress bar */}
           <div className="w-full h-1.5 rounded-full bg-white/10 overflow-hidden">
             <div
               className="h-full rounded-full bg-gradient-to-r from-blue-500 via-cyan-300 to-blue-400 shadow-[0_0_15px_rgba(96,165,250,0.8)] transition-all duration-300 ease-out"
@@ -179,7 +176,6 @@ const Preloader = ({ onSkip }) => {
             />
           </div>
 
-          {/* Loading dots */}
           <div className="flex justify-center gap-2 mt-5">
             {[0, 1, 2].map((dot) => (
               <span

@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 import myPic from "../assets/mypic.jpg";
 
+import { FiDownload, FiArrowUpRight } from "react-icons/fi";
+
 import {
   FaBriefcase,
   FaBoxes,
   FaChartBar,
   FaDatabase,
   FaCode,
-  FaPalette,
   FaTools,
+  FaCheckCircle,
+  FaLaptop,
   FaFileAlt,
   FaClipboardCheck,
-  FaLaptop,
-  FaChevronDown,
-  FaCheckCircle,
   FaRegLightbulb,
+  FaChevronDown,
 } from "react-icons/fa";
-
-import { FiDownload, FiArrowUpRight } from "react-icons/fi";
 
 const About = () => {
   const [activeFilter, setActiveFilter] = useState("All");
