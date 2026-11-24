@@ -5,7 +5,6 @@ import "aos/dist/aos.css";
 import {
   FaAward,
   FaCertificate,
-  FaExternalLinkAlt,
   FaCalendarAlt,
   FaGraduationCap,
   FaChalkboardTeacher,
@@ -13,9 +12,6 @@ import {
   FaChevronDown,
   FaCheckCircle,
   FaBookOpen,
-  FaLaptopCode,
-  FaShieldAlt,
-  FaRegCalendarCheck,
 } from "react-icons/fa";
 
 import { FiDownload, FiExternalLink, FiFileText } from "react-icons/fi";
